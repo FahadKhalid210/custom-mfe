@@ -8,7 +8,7 @@ function CourseList() {
   const [searchQuery, setSearchQuery] = useState("");
 
   async function handleSearch () {
-    const apiUrl = "http://local.overhang.io:8000/api/course_list/fahad2/?name="+ searchQuery;
+    const apiUrl = "http://local.overhang.io/api/course_list/fahad2/?name="+ searchQuery;
     const response = await axios.get(
         apiUrl,
     );
@@ -19,7 +19,7 @@ function CourseList() {
   useEffect(() => {
     async function fetchCourses() {
       const response = await axios.get(
-        "http://local.overhang.io:8000/api/course_list/fahad2/",
+        "http://local.overhang.io/api/course_list/fahad2/",
       );
       setCourses(response.data);
     }
