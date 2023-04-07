@@ -8,9 +8,9 @@ function CourseListComponent({ courses }) {
     <div>
       {courses.map(course => (
         <div className="main-class">
-        <img src={lmsURL + course.img} />
+        <img src={lmsURL + course.course_image_url} />
         <div>
-          <h3>{course.name}</h3>
+          <h3>{course.display_name}</h3>
         </div>
       </div>
       ))}
